@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
 import { products } from '../products';
+import {CatDataService} from '../services/catDataService/catDataService';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-cat-list',
+  templateUrl: './cat-list.component.html',
+  styleUrls: ['./cat-list.component.css']
 })
-export class ProductListComponent {
+export class CatListComponent {
   products = products;
 
+constructor(private catDataService: CatDataService) { }
   share() {
     window.alert('The product has been shared!');
   }
